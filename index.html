@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>NÁVRH – Paputo.cz | Zdravý papoušek začíná v misce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6EC; --sand:#F3E9D6; --teal:#0F4C4A; --teal-2:#16615E; --leaf:#3E8E5E;
+  --mango:#F4A62A; --coral:#E86F4C; --sky:#DDEFEA; --ink:#1F2A2A; --muted:#5C6B69;
+  --r:18px; --shadow:0 10px 30px -12px rgba(15,76,74,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .5em;color:var(--teal)}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.6em}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.9em 1.5em;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-mango{background:var(--mango);color:var(--ink)}
+.btn-ghost{border:2px solid currentColor}
+section{padding:72px 0}
+.center{text-align:center}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px}
+.center .lead{margin:0 auto 2rem}
+
+/* demo pruh */
+.demo{background:var(--coral);color:#fff;text-align:center;font-weight:700;font-size:.85rem;padding:6px 12px}
+
+/* horní lišta */
+.topbar{background:var(--teal);color:#E7F2EF;font-size:.88rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar a{text-decoration:none}
+
+/* hlavička */
+header{background:var(--cream);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--sand)}
+.head{display:flex;align-items:center;gap:24px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:Fraunces,serif;font-size:1.6rem;color:var(--teal)}
+.logo small{display:block;font-size:.75rem;color:var(--muted);font-weight:700;letter-spacing:.04em}
+.search{flex:1;display:flex;align-items:center;background:#fff;border:2px solid var(--sand);border-radius:999px;padding:.55em 1em;color:var(--muted);gap:.6em}
+.icons{display:flex;gap:18px;font-weight:700;font-size:.92rem}
+.icons a{text-decoration:none;display:flex;align-items:center;gap:6px}
+.cart{background:var(--teal);color:#fff;padding:.5em 1em;border-radius:999px}
+nav.main{background:var(--cream)}
+nav.main ul{list-style:none;margin:0;padding:0 20px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;max-width:1180px;margin:0 auto}
+nav.main a{display:block;padding:.65em .9em;font-weight:800;text-decoration:none;border-radius:10px;font-size:.95rem}
+nav.main a:hover{background:var(--sky)}
+nav.main .hl a{background:var(--mango)}
+.burger{display:none}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% 20%,#1d7a72 0,var(--teal) 60%);color:#fff;padding:64px 0 88px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--cream);clip-path:ellipse(70% 100% at 50% 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem)}
+.hero h1 em{font-style:normal;color:var(--mango)}
+.hero p{font-size:1.2rem;color:#D6ECE7;max-width:520px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.trust{display:flex;gap:22px;flex-wrap:wrap;font-weight:700;font-size:.95rem;color:#E7F2EF}
+.trust span{display:flex;align-items:center;gap:8px}
+.trust i{font-style:normal;background:rgba(255,255,255,.14);border-radius:50%;width:32px;height:32px;display:grid;place-items:center}
+.hero-img{position:relative}
+.hero-img img{border-radius:28px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);background:#fff}
+.badge{position:absolute;left:-18px;bottom:-18px;background:var(--mango);color:var(--ink);border-radius:20px;padding:14px 18px;font-weight:800;box-shadow:var(--shadow);max-width:230px;line-height:1.25}
+.badge b{font-family:Fraunces,serif;font-size:1.5rem;display:block}
+
+/* druhy */
+.species{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sp{background:#fff;border-radius:var(--r);padding:22px 16px;text-align:center;text-decoration:none;box-shadow:0 1px 0 var(--sand);border:2px solid transparent;transition:.15s}
+.sp:hover{border-color:var(--mango);transform:translateY(-3px);box-shadow:var(--shadow)}
+.sp .dot{width:84px;height:84px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;overflow:hidden}
+.sp .dot img{width:100%;height:100%;object-fit:cover}
+.sp b{display:block;font-size:1.05rem}
+.sp small{color:var(--muted)}
+
+/* 8 kroků */
+.steps-bg{background:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:#fff;border-radius:var(--r);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:.15s}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step .ph{aspect-ratio:4/3;background:#fff;position:relative;overflow:hidden}
+.step .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.step .n{position:absolute;top:12px;left:12px;background:var(--teal);color:#fff;font-family:Fraunces,serif;font-weight:800;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:1.15rem;border:3px solid #fff}
+.step .tx{padding:16px 18px 20px}
+.step h3{font-size:1.15rem;margin-bottom:.25em}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+.bundles{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.bundle{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:center;background:var(--teal);color:#fff;border-radius:24px;padding:20px}
+.bundle img{border-radius:16px;background:#fff;aspect-ratio:1;object-fit:contain;width:100%}
+.bundle h3{color:#fff;font-size:1.3rem}
+.bundle p{color:#CFE6E1;margin:.2em 0 1em;font-size:.95rem}
+.price{font-family:Fraunces,serif;font-size:1.6rem;color:var(--mango);margin-right:12px}
+
+/* problémy */
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prob{border-radius:var(--r);padding:26px;text-decoration:none;color:var(--ink);position:relative;transition:.15s}
+.prob:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.prob .ic{font-size:2rem}
+.prob h3{font-size:1.25rem;margin:.4em 0 .3em}
+.prob p{margin:0 0 .8em;color:#3d4a48}
+.prob span{font-weight:800;color:var(--teal)}
+.c1{background:#FDE3D8}.c2{background:#E2F0D9}.c3{background:#FFF0C7}.c4{background:#DDEFEA}.c5{background:#EDE3F6}.c6{background:#F9E1E6}
+
+/* Jana */
+.jana{background:var(--teal);color:#fff}
+.jana .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.jana h2{color:#fff}
+.jana p{color:#D6ECE7}
+.quote{font-family:Fraunces,serif;font-size:1.5rem;color:var(--mango);border-left:4px solid var(--mango);padding-left:18px;margin:24px 0}
+.jana-img{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:#174f4c}
+.jana-img img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.facts div{background:rgba(255,255,255,.08);border-radius:14px;padding:14px;text-align:center}
+.facts b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:var(--mango)}
+.facts small{color:#CFE6E1}
+
+/* taháky */
+.dl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dl a{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:16px;text-decoration:none;font-weight:800;border:2px solid var(--sand)}
+.dl a:hover{border-color:var(--leaf)}
+.dl i{font-style:normal;background:var(--leaf);color:#fff;border-radius:10px;padding:6px 8px;font-size:.75rem}
+
+/* články */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{background:#fff;border-radius:var(--r);overflow:hidden;text-decoration:none;transition:.15s}
+.post:hover{box-shadow:var(--shadow)}
+.post .ph{aspect-ratio:16/9;overflow:hidden;background:var(--sky);position:relative}
+.post .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.post .tx{padding:18px 20px 22px}
+.post small{color:var(--coral);font-weight:800}
+.post h3{font-size:1.2rem;margin:.3em 0 0}
+
+/* poradenství CTA */
+.consult{background:var(--mango);border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.consult h2{margin:0 0 .2em}
+.consult p{margin:0;font-size:1.1rem}
+.btn-teal{background:var(--teal);color:#fff}
+
+footer{background:#0B3735;color:#CFE6E1;padding:56px 0 24px;margin-top:72px;font-size:.95rem}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+footer h4{color:#fff;font-family:Fraunces,serif;font-size:1.1rem;margin:0 0 .8em}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:.35em 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--mango)}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:960px){
+  .hero .wrap,.jana .wrap{grid-template-columns:1fr}
+  .species,.steps,.dl{grid-template-columns:repeat(2,1fr)}
+  .probs,.posts{grid-template-columns:1fr 1fr}
+  .bundles{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .consult{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:52px 0}
+  .search,.icons .acc{display:none}
+  nav.main ul{display:none}
+  nav.main.open ul{display:flex;flex-direction:column;padding-bottom:12px}
+  .burger{display:block;margin-left:auto;font-weight:800;background:var(--sky);border:0;border-radius:10px;padding:.5em .8em;font:inherit}
+  .icons{margin-left:0}
+  .probs,.posts{grid-template-columns:1fr}
+  .bundle{grid-template-columns:96px 1fr}
+  .badge{left:12px;bottom:-14px}
+  .facts{grid-template-columns:1fr 1fr 1fr}
+  .consult{padding:28px}
+  footer .cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">🛈 Toto je NÁVRH nového vzhledu – nejde o funkční e-shop. Odkazy vedou na skutečný paputo.cz.</div>
+
+<div class="topbar"><div class="wrap">
+  <span>🌿 Ruční výroba na zakázku · suroviny v BIO a potravinářské kvalitě</span>
+  <span><a href="tel:+420603459399">☎ 603 459 399</a> · <a href="mailto:info@paputo.cz">info@paputo.cz</a></span>
+</div></div>
+
+<header>
+  <div class="wrap head">
+    <a class="logo" href="#"><div><b>Paputo</b><small>CELOSTNÍ VÝŽIVA PRO PAPOUŠKY</small></div></a>
+    <div class="search">🔍 Hledejte krmivo, druh papouška nebo problém…</div>
+    <div class="icons">
+      <a class="acc" href="https://www.paputo.cz/login/">👤 Účet</a>
+      <a class="cart" href="https://www.paputo.cz/kosik/">🛒 Košík</a>
+    </div>
+    <button class="burger" onclick="document.querySelector('nav.main').classList.toggle('open')">☰ Menu</button>
+  </div>
+  <nav class="main"><ul>
+    <li class="hl"><a href="#zacit">⭐ Jak začít</a></li>
+    <li><a href="https://www.paputo.cz/zrniny/">Krmivo a zrniny</a></li>
+    <li><a href="https://www.paputo.cz/vitaminy-a-mineraly/">Vitamíny a minerály</a></li>
+    <li><a href="https://www.paputo.cz/skubani-nutno-dodat-vsechny-ziviny-produkty-c-1-8-viz-navody/">Škubání peří</a></li>
+    <li><a href="https://www.paputo.cz/zdrave-mlsani-pamlsky/">Pamlsky</a></li>
+    <li><a href="https://www.paputo.cz/hygiena-a-domacnost/">Lékárnička</a></li>
+    <li><a href="https://www.paputo.cz/konzultace-poradenstvi/">Poradenství</a></li>
+    <li><a href="https://www.paputo.cz/navody-paputo/">Návody</a></li>
+    <li><a href="https://www.paputo.cz/kontakty/">Kontakt</a></li>
+  </ul></nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--mango)">Ručně míchané krmivo · Kladruby, jižní Čechy</span>
+      <h1>Zdravý papoušek <em>začíná v misce.</em></h1>
+      <p>Samotné zrní a zelenina nestačí. Sestavíme vašemu papouškovi kompletní přírodní jídelníček – krok za krokem, podle druhu i zdravotního stavu.</p>
+      <div class="cta">
+        <a class="btn btn-mango" href="#druh">🦜 Najít krmivo pro mého papouška</a>
+        <a class="btn btn-ghost" href="#poradna">Poradit se s Janou</a>
+      </div>
+      <div class="trust">
+        <span><i>✋</i>Ruční výroba</span>
+        <span><i>🌱</i>BIO suroviny</span>
+        <span><i>📖</i>Návody zdarma</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.jpg" alt="Papoušek před a po změně stravy">
+          </div>
+  </div>
+</section>
+
+<!-- DRUH -->
+<section id="druh">
+  <div class="wrap center">
+    <span class="eyebrow">Krok 1</span>
+    <h2>Jakého máte papouška?</h2>
+    <p class="lead">Každý druh potřebuje jinou směs. Klikněte a ukážeme vám přesně, co mu dát.</p>
+    <div class="species">
+      <a class="sp" href="https://www.paputo.cz/andulka-prvotni-objednavka/"><div class="dot" style="background:#E2F0D9"><img src="img/andulky.jpg" alt=""></div><b>Andulka</b><small>vlastní balíček</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#FFF0C7">🦜</div><b>Korela</b><small>a kakariki</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#FDE3D8">🦜</div><b>Agapornis</b><small>a malí papoušci</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#DDEFEA">🦜</div><b>Žako</b><small>šedý papoušek</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#E2F0D9">🦜</div><b>Amazoňan</b><small>a amazónek</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#FDE3D8">🦜</div><b>Ara</b><small>velcí papoušci</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#F3E9D6"><img src="img/kakadu.png" alt="" style="object-fit:contain"></div><b>Kakadu</b><small>vč. růžového a inka</small></a>
+      <a class="sp" href="https://www.paputo.cz/vsechny-druhy-vyjma-andulek/"><div class="dot" style="background:#EDE3F6">🦜</div><b>Jiný druh</b><small>eklekt, pyrura, alexandr…</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 KROKŮ -->
+<section class="steps-bg" id="zacit">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Krok 2 · Schéma Paputo</span>
+      <h2>Základ zdraví v 8 krocích</h2>
+      <p class="lead">Produkty jsou v e-shopu očíslované 1–8. Dohromady dodají vše, co samotné zrní a zelenina neobsahují.</p>
+    </div>
+    <div class="steps">
+      <a class="step" href="https://www.paputo.cz/zrniny-2/"><div class="ph"><img src="img/zrniny.jpg" alt=""><span class="n">1</span></div><div class="tx"><h3>Zrniny dle druhu</h3><p>Ručně míchaná směs. Začněte variantou START.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/02--bio-liskooriskovo-pupalkovy--lneno-konopny--za-studena-lisovany-olej-s-organickym-vit-d3/"><div class="ph"><img src="img/olej.jpg" alt=""><span class="n">2</span></div><div class="tx"><h3>Olej s vitamínem D3</h3><p>Když papoušek nesedí na přímém slunci.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/003-pyl-rouskovy-100-g-puvod-cr-zasoba-vitaminu-na-rok/"><div class="ph"><img src="img/pyl.jpg" alt=""><span class="n">3</span></div><div class="tx"><h3>Pyl nebo Multipap</h3><p>Vitamíny z květů, plodů a bylin.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/04--clay-bloc-amazon-river-550g-detoxikace-jilovy-mineralni-kamen-pro-papousky--vycisteni-trav--traktu--mineralni-jilovy-kamen--versele-laga-orlux-/"><div class="ph"><img src="img/jil.jpg" alt=""><span class="n">4</span></div><div class="tx"><h3>Jílový kámen</h3><p>Minerály a přirozená detoxikace.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/05b--odhorcene-pivovarske-kvasnice-zdroj-vitaminu-sk-b/"><div class="ph"><img src="img/kvasnice.jpg" alt=""><span class="n">5</span></div><div class="tx"><h3>Pivovarské kvasnice</h3><p>Celá skupina vitamínů B včetně B12.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/humac-odvazeny-v-prakticke-sroubovaci-doze-doplnek-s-vysokym-obsahem-huminovych-kyselin-kartac-na-streva-odstraneni-plisni--tezkych-kovu-ze-strev/"><div class="ph"><img src="img/humac.jpg" alt=""><span class="n">6</span></div><div class="tx"><h3>Humac / biouhlí</h3><p>Huminové kyseliny pro zdravé trávení.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/07--mineral-bloc-loro-parque-400g-mineralni-kamen-pro-papousky/"><div class="ph"><img src="img/mineral.jpg" alt="" style="object-fit:contain"><span class="n">7</span></div><div class="tx"><h3>Minerální kámen</h3><p>Volně k dispozici v kleci.</p></div></a>
+      <a class="step" href="https://www.paputo.cz/organicapap-kosti-peri--dychani---zdroj-organickeho-vapniku-a-ostatnich-slozek-nutnych-pro-jeho-vstrebatelnost-100g-vynikajici-zdroj-prirozeneho--velmi-dobre-vyuzitelneho-vapniku/"><div class="ph"><img src="img/organica.jpg" alt=""><span class="n">8</span></div><div class="tx"><h3>OrganiCaPAP</h3><p>Přírodní vápník pro kosti a peří.</p></div></a>
+    </div>
+
+    <div class="bundles">
+      <div class="bundle">
+        <img src="img/balicek.jpg" alt="">
+        <div><h3>Balíček kroků 2–8</h3><p>Vše kromě zrnin v jednom. Stačí přidat směs podle druhu.</p>
+        <span class="price">1 014 Kč</span><a class="btn btn-mango" href="https://www.paputo.cz/balicek-zakladnich-produktu-pro-zdravi-papouska-c-2-8--staci-doplnit-jen-vhodne-zrniny-/">Do košíku</a></div>
+      </div>
+      <div class="bundle">
+        <img src="img/andulka-balicek.jpg" alt="">
+        <div><h3>Andulka – základní balíček</h3><p>Zrniny START 1 kg, olej s D3, OrganiCa, kvasnice a další.</p>
+        <span class="price">1 261 Kč</span><a class="btn btn-mango" href="https://www.paputo.cz/andulka-zakladni-balicek/">Do košíku</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLÉMY -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Řešíte konkrétní potíž?</span>
+      <h2>Vyberte, co vás trápí</h2>
+      <p class="lead">Často nejde o „hlavu“, ale o misku s krmením. Ke každé potíži máme návod i produkty.</p>
+    </div>
+    <div class="probs">
+      <a class="prob c1" href="https://www.paputo.cz/informace-v-pripade-skubani/"><div class="ic">🪶</div><h3>Škubání peří</h3><p>Rychle doplnit všechny živiny, vitamín D3 a omega-3.</p><span>Návod a produkty →</span></a>
+      <a class="prob c2" href="https://www.paputo.cz/jatra-a-ocista-organizmu/"><div class="ic">🌿</div><h3>Játra a detoxikace</h3><p>Směsi a byliny, které pomáhají čistit a regenerovat játra.</p><span>Zobrazit →</span></a>
+      <a class="prob c3" href="https://www.paputo.cz/odcerveni/"><div class="ic">🛡️</div><h3>Parazité</h3><p>Šetrná přírodní antiparazitika jako Papendo.</p><span>Zobrazit →</span></a>
+      <a class="prob c4" href="https://www.paputo.cz/nase-novinky/vapnik-a-vitamin-d/"><div class="ic">🦴</div><h3>Vápník a vitamín D</h3><p>Křehké kosti, špatné peří, problémy se snášením.</p><span>Přečíst článek →</span></a>
+      <a class="prob c5" href="https://www.paputo.cz/02b-konopny-cb-extrakt-v-bio-konopno-pupalkovem-oleji-s-bez-vit-d3-uvedte-v-poznamce--pro-zklidneni-pri-svedeni-kuze-stresu-skubani--neklidu/"><div class="ic">😟</div><h3>Stres a neklid</h3><p>Zklidnění při svědění kůže, stresu a neklidu.</p><span>Zobrazit →</span></a>
+      <a class="prob c6" href="https://www.paputo.cz/zakladni-lekarnicka-nejen-pro-papousky/"><div class="ic">🩹</div><h3>První pomoc</h3><p>Základní lékárnička nejen pro papoušky.</p><span>Zobrazit →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- JANA -->
+<section class="jana" id="o-nas">
+  <div class="wrap">
+    <div class="jana-img"><img src="img/zrniny.jpg" alt="Ručně míchané zrniny"></div>
+    <div>
+      <span class="eyebrow" style="color:var(--mango)">Kdo za Paputem stojí</span>
+      <h2>Každou směs míchám ručně – pro vašeho konkrétního papouška.</h2>
+      <p>Jmenuji se Jana Jiroušková Kamberská. Paputo je jediný e-shop zaměřený na organickou a komplexní stravu pro papoušky. Směsi míchám a balím ručně podle druhu, zdravotního stavu i vašich přání.</p>
+      <div class="quote">„Lékař léčí, příroda uzdravuje.“<br><small style="font-size:.9rem;color:#CFE6E1">— Hippokrates</small></div>
+      <div class="facts">
+        <div><b>20+</b><small>druhů papoušků</small></div>
+        <div><b>45+</b><small>druhů semen ve směsích</small></div>
+        <div><b>ručně</b><small>míchané směsi</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAHÁKY -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Zdarma ke stažení</span>
+      <h2>Tahák na lednici</h2>
+      <p class="lead">Harmonogram krmení podle schématu Paputo pro váš druh. Vytiskněte si ho a už nikdy nezapomenete.</p>
+    </div>
+    <div class="dl">
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20andulka.pdf"><i>PDF</i>Andulka</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20Zako.pdf"><i>PDF</i>Žako</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20ara.pdf"><i>PDF</i>Ara</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20eklekt.pdf"><i>PDF</i>Eklekt</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20KAKADU.pdf"><i>PDF</i>Kakadu</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20KAKADU%20RUZOVY.pdf"><i>PDF</i>Kakadu růžový</a>
+      <a href="https://www.paputo.cz/user/documents/upload/Vyzivovy%20plan%20tahak%20na%20lednici%20uni%20mal%C3%BD.pdf"><i>PDF</i>Malé druhy</a>
+      <a href="https://www.paputo.cz/user/documents/upload/__navody%20paputo%202022%2001.pdf"><i>PDF</i>Obecné návody</a>
+    </div>
+  </div>
+</section>
+
+<!-- ČLÁNKY -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Poradna</span><h2>Články a rady</h2></div>
+    <div class="posts">
+      <a class="post" href="https://www.paputo.cz/nase-novinky/proc-si-papousek-skube-peri--casto-nejde-o--hlavu---ale-o-misku-s-krmenim/"><div class="ph"><img src="img/zako.jpg" alt=""></div><div class="tx"><small>22. 4. 2026</small><h3>Proč si papoušek škube peří? Často nejde o „hlavu“, ale o misku</h3></div></a>
+      <a class="post" href="https://www.paputo.cz/nase-novinky/projekt--cisticka-zrnin-a-pristroj-na-vyrobu-krmnych-pelet/"><div class="ph"><img src="img/divoka.jpg" alt=""></div><div class="tx"><small>23. 3. 2026</small><h3>Projekt „Čistička zrnin a přístroj na výrobu krmných pelet“</h3></div></a>
+      <a class="post" href="https://www.paputo.cz/nase-novinky/vapnik-a-vitamin-d/"><div class="ph"><img src="img/organica.jpg" alt=""></div><div class="tx"><small>26. 1. 2025</small><h3>Vápník a vitamín D</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- PORADENSTVÍ -->
+<section id="poradna" style="padding-top:0">
+  <div class="wrap">
+    <div class="consult">
+      <div><h2>Nevíte si rady? Napište mi.</h2><p>Individuální konzultace a výživový plán přímo pro vašeho papouška.</p></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-teal" href="https://www.paputo.cz/individualni-konzultace/">Objednat konzultaci</a>
+        <a class="btn btn-ghost" href="tel:+420603459399">☎ 603 459 399</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Paputo.cz</h4><p>Celostní organická výživa pro papoušky. Ruční výroba krmiv a doplňků na zakázku.</p><p>Kladruby 11, 391 55 Dolní Hořice<br>IČO 02052911</p></div>
+      <div><h4>Nakupování</h4><ul>
+        <li><a href="https://www.paputo.cz/prvni-objednavka-zakladni-slozky-vyzivy/">První objednávka</a></li>
+        <li><a href="https://www.paputo.cz/zrniny/">Krmivo a zrniny</a></li>
+        <li><a href="https://www.paputo.cz/vitaminy-a-mineraly/">Vitamíny a minerály</a></li>
+        <li><a href="https://www.paputo.cz/pro-psy/">Pro psy</a></li></ul></div>
+      <div><h4>Rady a návody</h4><ul>
+        <li><a href="https://www.paputo.cz/navody-paputo/">Jak začít / Návody</a></li>
+        <li><a href="https://www.paputo.cz/informace-v-pripade-skubani/">Škubání peří</a></li>
+        <li><a href="https://www.paputo.cz/konzultace-poradenstvi/">Poradenství</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+420603459399">☎ 603 459 399</a></li>
+        <li><a href="mailto:info@paputo.cz">✉ info@paputo.cz</a></li>
+        <li><a href="https://www.facebook.com/paputo.cz">Facebook</a></li>
+        <li><a href="https://www.paputo.cz/obchodni-podminky/">Obchodní podmínky</a></li>
+        <li><a href="https://www.paputo.cz/podminky-ochrany-osobnich-udaju/">Ochrana osobních údajů</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Paputo.cz</span><span>Návrh vzhledu · říjen 2026</span></div>
+  </div>
+</footer>
+</body>
+</html>
