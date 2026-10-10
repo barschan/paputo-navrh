@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="cs" data-theme="n3">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Paputo.cz (návrh 3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo"><div class="wrap">
+  <span>🛈 NÁVRH 3 – ukázka, ne funkční e-shop · <a href="../">návrh 1</a> · <a href="../navrh2/">návrh 2</a> · <a href="rozbor.html">rozbor a kontrolní seznamy</a></span>
+</div></div>
+<div class="usp"><div class="wrap">
+  <span>✋ Zakázková ruční výroba</span><span>🌱 Suroviny v BIO a potravinářské kvalitě</span><span>☎ Poradíme: <a href="tel:+420603459399" style="color:inherit">603 459 399</a></span>
+</div></div>
+<header class="site">
+  <div class="wrap head">
+    <a class="logo" href="#/"><img src="img/b/logo-paputo.png" alt=""><span><b>Paputo</b><small>Celostní výživa pro papoušky</small></span></a>
+    <div class="search">
+      <span class="ico">🔍</span>
+      <input id="q" type="search" autocomplete="off" placeholder="Hledat krmivo, druh papouška nebo problém…" aria-label="Hledat">
+      <div class="suggest" id="suggest"></div>
+    </div>
+    <div class="hicons">
+      <a class="acc" href="https://www.paputo.cz/login/" target="_blank" rel="noopener">👤 Účet</a>
+      <a class="cart" href="https://www.paputo.cz/kosik/" target="_blank" rel="noopener">🛒 Košík</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+  <nav class="main" id="menu"></nav>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Paputo.cz</h4><p>e-shop nejen pro chovatele papoušků<br>Ing. Jana Jiroušková Kamberská<br>Kladruby 11, 391 55 Dolní Hořice<br>IČO: 02052911</p></div>
+      <div><h4>Nakupování</h4><ul>
+        <li><a href="#/druhy">Podle druhu papouška</a></li>
+        <li><a href="#/kategorie/zrniny">Krmivo a zrniny</a></li>
+        <li><a href="#/kategorie/vitaminy-a-mineraly">Vitamíny a minerály</a></li>
+        <li><a href="#/kategorie/pro-psy">Pro psy</a></li></ul></div>
+      <div><h4>Poradna</h4><ul>
+        <li><a href="#/stranka/jak-nakupovat">Jak vybrat vhodné krmivo</a></li>
+        <li><a href="#/poradna">Návody a články</a></li>
+        <li><a href="#/stranka/obchodni-podminky">Obchodní podmínky</a></li>
+        <li><a href="#/stranka/podminky-ochrany-osobnich-udaju">Ochrana osobních údajů</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+420603459399">☎ +420 603 459 399</a></li>
+        <li><a href="mailto:info@paputo.cz">✉ info@paputo.cz</a></li>
+        <li><a href="https://www.facebook.com/paputo.cz" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#/stranka/kontakty">Kontakty</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 www.paputo.cz</span><span>Návrh 3 · říjen 2026</span></div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Mobilní navigace">
+  <a href="#/" data-k="home"><i>🏠</i>Domů</a>
+  <a href="#" id="tab-menu" data-k="kategorie"><i>☰</i>Sortiment</a>
+  <a href="#" id="tab-search" data-k="hledat"><i>🔍</i>Hledat</a>
+  <a href="#/poradna" data-k="poradna"><i>💬</i>Poradna</a>
+  <a href="https://www.paputo.cz/kosik/" target="_blank" rel="noopener"><i>🛒</i>Košík</a>
+</nav>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Paputo – návrh 3: posouzení, kontrolní seznamy, srovnání</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#17211F;background:#FAF8F4;line-height:1.6;font-size:16px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;color:#0F4C4A;line-height:1.15}
+h1{font-size:2.2rem;margin:34px 0 8px}
+h2{font-size:1.5rem;margin:48px 0 10px;padding-top:18px;border-top:1px solid #E6E1D7}
+h3{font-size:1.05rem;margin:22px 0 6px}
+a{color:#0F4C4A;font-weight:600}
+.top{background:#1E2624;color:#fff;padding:10px 0;font-size:.9rem}.top a{color:#FFD08A}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.btn{display:inline-block;background:#0F4C4A;color:#fff;text-decoration:none;padding:.6em 1.1em;border-radius:10px;font-weight:600}
+.btn.alt{background:#fff;color:#0F4C4A;border:1.5px solid #0F4C4A}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:.9rem;margin:10px 0;border:1px solid #E6E1D7}
+th,td{border-bottom:1px solid #EEEAE2;padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#F1EEE7;font-weight:600}
+.y{color:#2E7D4F;font-weight:700}.n{color:#A94E2C;font-weight:700}.p{color:#9A6B00;font-weight:700}
+.verdict{background:#fff;border:1px solid #E6E1D7;border-left:5px solid #0F4C4A;border-radius:12px;padding:16px 20px;margin:14px 0}
+.warn{background:#FFF6E6;border-left:5px solid #F4A62A;border-radius:12px;padding:12px 16px;margin:12px 0}
+.shots{display:grid;grid-template-columns:110px repeat(3,1fr);gap:10px;align-items:start;margin-top:10px}
+.shots .h{font-weight:700;font-size:.85rem;text-align:center;padding:6px;background:#F1EEE7;border-radius:8px}
+.shots .r{font-weight:600;font-size:.85rem;color:#56625F;padding-top:8px}
+.shots a{display:block;background:#fff;border:1px solid #E6E1D7;border-radius:10px;padding:5px}
+.shots img{width:100%;display:block;border-radius:6px}
+.shots.mob a img{max-width:260px;margin:0 auto}
+ol li,ul li{margin:.3em 0}
+small{color:#56625F}
+@media(max-width:800px){.shots{grid-template-columns:1fr 1fr 1fr}.shots .r{grid-column:1/-1}.shots .corner{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap" style="padding-bottom:0"><a href="./">Otevřít návrh 3</a> · <a href="../navrh2/">návrh 2</a> · <a href="../">návrh 1</a> · Návrhy 1 a 2 ani paputo.cz se nezměnily.</div></div>
+<div class="wrap">
+<h1>Návrh 3: posouzení, kontrolní seznamy a srovnání</h1>
+<div class="links"><a class="btn" href="./">Návrh 3</a><a class="btn alt" href="../navrh2/?theme=priroda">Návrh 2 Přírodní</a><a class="btn alt" href="../navrh2/?theme=moderni">Návrh 2 Moderní</a><a class="btn alt" href="#srovnani">Screenshoty vedle sebe ↓</a></div>
+
+<h2>Je návrh 3 skutečně přínosnější než návrh 2?</h2>
+<div class="verdict"><b>Ano, ale jen mírně.</b> Návrh 3 je vylepšená verze návrhu 2, ne nový koncept. Struktura e-shopu, navigace, stránky druhů a poradna zůstávají stejné. Pokud by se měnily jen barvy, nemělo by smysl ho dělat. Proto obsahuje jen změny, které řeší konkrétní slabiny viditelné na screenshotech návrhu 2.</div>
+<table>
+<tr><th>Slabina návrhu 2</th><th>Řešení v návrhu 3</th><th>Typ změny</th></tr>
+<tr><td>Detail produktu je skoro stejný jako v návrhu 1; cena a tlačítko odjedou při čtení popisu</td><td>Nákupní box (cena, varianty, košík, kód, měrná cena, doprava) zůstává na počítači vedle obsahu viditelný; popis má čitelnou šířku řádku (max. ~72 znaků)</td><td>funkce / čitelnost</td></tr>
+<tr><td>Schéma 1–8 na úvodu = malé dlaždice bez nákupní akce</td><td>Schéma jako plnohodnotné produktové karty s důvodem „proč ve schématu“ a tlačítkem</td><td>nákup</td></tr>
+<tr><td>Tlačítko vedle ceny se na úzkých kartách mačká; stav a varianty na dvou místech</td><td>Tlačítko přes celou šířku karty, stav + počet variant v jednom řádku, měrná cena vedle ceny</td><td>nákup / přehlednost</td></tr>
+<tr><td>Úvod má 7 sekcí, „3 kroky“ se překrývají s výběrem druhu</td><td>4 sekce: výběr druhu → schéma (nákup) → problémy → poradna</td><td>kompozice</td></tr>
+<tr><td>Přírodní varianta je hodně béžová, produkty v ní zanikají</td><td>bílé plochy a karty, teplá bílá místo béžové, béžový je jen jeden pás; zelená nese značku, oranžová jen nákupní tlačítka</td><td>vizuál</td></tr>
+<tr><td>Chyba: drobečková navigace u oleje ukazuje „Škubání peří“</td><td>vybírá se nejkonkrétnější kategorie („Oleje s/bez vitamínu D3“)</td><td>oprava</td></tr>
+</table>
+<p><b>Co návrh 3 neřeší (a žádný další vizuální návrh nevyřeší):</b> fotky, které neukazují produkt, a chyby v textech na e-shopu. To je teď pro profesionální dojem důležitější než další grafické kolo. Doporučuji brát návrh 3 jako základ a další energii dát do fotek a obsahu (body 3 a 4 níže).</p>
+
+<h2 id="jana">Co musí Jana odborně potvrdit</h2>
+<p>Do návrhů jsem <b>nepřidala žádná nová zdravotní ani výživová tvrzení</b>. Následující věci jsou ale moje zobecnění, zkrácení nebo odvození z jejích textů. Bez jejího potvrzení nesmí jít do ostrého e-shopu.</p>
+<table>
+<tr><th>#</th><th>Co</th><th>Odkud to je</th><th>Otázka pro Janu</th></tr>
+<tr><td>1</td><td>Rozdělení 29 druhů na malé / střední / velké</td><td class="n">můj odhad – e-shop ho neuvádí</td><td>Je zařazení správné? (např. Korela a Kakariky mezi malými, Alexandr mezi středními)</td></tr>
+<tr><td>2</td><td>Clay Bloc Mini → malí papoušci</td><td class="y">název: „pro menší papoušky“</td><td>Platí pro celou skupinu „malí“?</td></tr>
+<tr><td>3</td><td>Clay Bloc Amazon River → střední a velcí</td><td class="n">odvozeno (protiklad k Mini) – e-shop velikost neuvádí</td><td>Je to správně? Hodí se i pro malé druhy?</td></tr>
+<tr><td>4</td><td>Divoká a travní semena → malí; MIX namáčení → střední a velcí</td><td class="y">NÁVODY: „hlavně pro malé druhy“ / „MIX NAMÁČENÍ pro větší druhy“</td><td>Odpovídají „větší druhy“ mé skupině střední + velcí?</td></tr>
+<tr><td>5</td><td>Mix hmyzu → malí; Sušený hmyz → střední a velcí</td><td class="y">názvy produktů</td><td>Je vhodné hmyz doporučovat všem druhům ve skupině?</td></tr>
+<tr><td>6</td><td>Travní semena → 11 „australských“ druhů (Andulka, Andulka ALL, Korela, Neoféma, Rosela, Barnard, p. královský, p. nádherný, p. horský, p. zpěvavý, p. červenokřídlý)</td><td class="p">citace „nutná pro zdraví andulek, ale i ostatních australských“ – výběr druhů je můj</td><td>Je seznam úplný a správný?</td></tr>
+<tr><td>7</td><td>Andulka a „Andulka ALL“ → Andulka balíček + OrganiCa pro andulky; ostatní → balíček č. 2–8</td><td class="p">balíček 2–8 „vyjma andulek“; co přesně je „Andulka ALL“, nevím</td><td>Co je „Andulka ALL“ a platí pro ni andulkový balíček?</td></tr>
+<tr><td>8</td><td>Na stránce každého druhu: „Začněte směsí START“</td><td class="y">perex kategorie Zrniny + NÁVODY</td><td>Platí pro všechny druhy?</td></tr>
+<tr><td>9</td><td>Výběr produktu do kroků schématu: krok 3 = Pyl (ne Multipap), 4 = Clay Bloc Amazon River (ne Mini), 5 = Pivovarské kvasnice 05a (ne odhořčené 05), 6 = Humac (ne Biochar)</td><td class="n">moje volba výchozího produktu</td><td>Které produkty mají být výchozí?</td></tr>
+<tr><td>10</td><td>Zkrácené důvody „proč ve schématu“ u kroků 1–8</td><td class="p">zkrácené citace z NÁVODŮ; kroky 4 a 7 mají stejný text</td><td>Schválit znění</td></tr>
+<tr><td>11</td><td>Krátké názvy a podtitulky všech 57 produktů (např. „Healer Animal gel – hojení ran“, „Konopný olej – svědění, stres, škubání“, „Papendo – přírodní antiparazitikum“)</td><td class="p">moje formulace podle jejích názvů a popisů</td><td>Projít seznam (soubor <code>names.json</code>), zejména podtitulky se zdravotním kontextem</td></tr>
+<tr><td>12</td><td>Texty dlaždic „Co vašeho papouška trápí?“ a to, kam vedou</td><td class="p">převzato z názvů kategorií a článků</td><td>Schválit propojení (např. „Nervozita, agresivita“ → její stránka o škubání)</td></tr>
+<tr><td>13</td><td>Úvodní věta „Zdravý papoušek začíná v misce“ + „doplňky, které zrní a zelenina neobsahují“</td><td class="p">parafráze jejího „JEN ZRNÍ a ZELENINA NESTAČÍ“</td><td>Schválit jako marketingový text</td></tr>
+<tr><td>14</td><td>„Doprava od 150 Kč, osobní odběr po domluvě zdarma“</td><td class="y">ceny dopravy z e-shopu k 10. 10. 2026</td><td>Je to aktuální?</td></tr>
+<tr><td>15</td><td>Fotky „před a po“ v úvodu</td><td>z úvodní stránky jejího e-shopu</td><td>Jsou to její papoušci / má souhlas majitelů?</td></tr>
+</table>
+<div class="warn">Obecně: popisy produktů na e-shopu obsahují Janina tvrzení o účincích (např. u olejů, Papenda, Healer). Do návrhu jsem je převzala beze změny. Před spuštěním doporučuji, aby si Jana ověřila, že odpovídají pravidlům pro prodej krmiv, doplňků a veterinárních přípravků. Posoudit to neumím a nehodnotím to.</div>
+
+<h2>1. Co lze převést do současného Shoptetu</h2>
+<p><small>Na paputo.cz běží Shoptet se šablonou č. 13. Už teď funguje: karusel bannerů, dlaždice podkategorií s obrázky, filtry, řazení, štítky (např. „Tip“), našeptávač vyhledávání, měrná cena a varianty s rozdělenými výběry. Shoptet umožňuje vkládat vlastní HTML/CSS/JS kódy v administraci (<a href="https://developers.shoptet.cz/uvodni-stranka/api/dokumentace/kody-do-sablon/">dokumentace Shoptet</a>). Dostupnost podle tarifu a šablony je potřeba ověřit v administraci.</small></p>
+<table>
+<tr><th>Prvek návrhu</th><th>Převod</th><th>Jak</th></tr>
+<tr><td>Barvy, písma, zaoblení, tlačítka, vzhled karet</td><td class="y">ano</td><td>nastavení šablony + vlastní CSS</td></tr>
+<tr><td>Karusel „před a po“, pruh důvěry, bannery</td><td class="y">ano</td><td>nativní bannery / HTML blok na úvodu</td></tr>
+<tr><td>Menu s podkategoriemi</td><td class="y">ano</td><td>nativní; vícesloupcové mega menu podle šablony, jinak CSS</td></tr>
+<tr><td>Štítky „č. 02“, „Balíček“, „Služba“</td><td class="y">ano</td><td>nativní příznaky produktů</td></tr>
+<tr><td>Cena „od“, měrná cena, dostupnost na kartě</td><td class="y">ano</td><td>nativní (už je na jejím webu)</td></tr>
+<tr><td>„N variant“ na kartě, tlačítko „Vybrat variantu“</td><td class="p">částečně</td><td>Shoptet u produktů s variantami vede na detail; text a vzhled přes šablonu/CSS</td></tr>
+<tr><td>„Proč ve schématu“ na kartě a v detailu</td><td class="p">částečně</td><td>krátký popis produktu nebo vlastní pole + úprava šablony</td></tr>
+<tr><td>Nákupní box viditelný při čtení (detail)</td><td class="p">částečně</td><td>CSS v šabloně, ověřit chování</td></tr>
+<tr><td>Stránky druhů (Žako, Korela…)</td><td class="p">částečně</td><td>jako kategorie „Podle druhu → Žako“ s přiřazenými produkty a textem (nativně). Tabulka směsí s předvybranou variantou zrnin vyžaduje vlastní JS – ověřit, jestli šablona umí předvybrat variantu z odkazu</td></tr>
+<tr><td>Návody mimo zboží, poradna</td><td class="y">ano</td><td>převést na Stránky / Články (nativní)</td></tr>
+<tr><td>Služby (konzultace, poukaz, směs na míru)</td><td class="y">ano</td><td>produkty se štítkem „Služba“</td></tr>
+<tr><td>Vyhledávání se skupinami, bez diakritiky, se synonymy</td><td class="n">ne nativně</td><td>Shoptet má vlastní našeptávač; pokročilé hledání = placený doplněk vyhledávání (ověřit nabídku)</td></tr>
+<tr><td>Spodní mobilní lišta, lepivé „Do košíku“ na mobilu</td><td class="p">částečně</td><td>vlastní CSS/JS, ověřit kolize se šablonou</td></tr>
+<tr><td>Filtr „jen skladem“, řazení</td><td class="y">ano</td><td>nativní filtry kategorie</td></tr>
+</table>
+
+<h2>2. Varianty, ceny a košík</h2>
+<table>
+<tr><th></th><th>V návrhu (ukázka)</th><th>Ve skutečném Shoptetu</th></tr>
+<tr><td>Varianty</td><td>převzaté z e-shopu, výběr funguje (zrniny: druh × balení × typ = 289 existujících kombinací z 580 možných; neexistující kombinace hlásí „není k dispozici“)</td><td>nativní varianty z parametrů – zrniny už dnes takto fungují (Shoptet má i vlastní hlášku o nedostupné kombinaci)</td></tr>
+<tr><td>Ceny a dostupnost</td><td><b>snímek k 10. 10. 2026</b> – neaktualizují se</td><td>živé z administrace</td></tr>
+<tr><td>Košík</td><td><b>nefunguje</b> – tlačítko otevře produkt na paputo.cz a vybraná varianta se nepřenese</td><td>nativní košík, doprava, platba</td></tr>
+<tr><td>Doporučené úpravy dat</td><td colspan="2">sjednotit zápis variant („30ml“ × „50 ml“, „1kg“ × „1 kg“), u dárkového poukazu doplnit „Kč“, seřadit hodnoty parametrů logicky (podle výrobce doplňku Dativery je Shoptet sám neřadí)</td></tr>
+</table>
+
+<h2>3. Fotografie – výměna a práva</h2>
+<p><small>Licence nelze z webu ověřit. Níže jsou jen signály, které je potřeba prověřit.</small></p>
+<table>
+<tr><th>Riziko</th><th>Co</th><th>Proč</th></tr>
+<tr><td class="n">vysoké – právní</td><td>Směs na míru (330)</td><td>na fotce je vodoznak <b>National Geographic</b></td></tr>
+<tr><td class="n">vysoké – právní</td><td>Banner „jak vybírat“ na úvodu</td><td>název souboru <code>istockphoto-470798481</code> = fotobanka iStock; je nutné mít licenci</td></tr>
+<tr><td class="p">ověřit licenci</td><td>Obrázky 8 kategorií (<code>pngegg*.png</code>)</td><td>stažené z pngegg.com, kde licence bývají nejasné. Návrh 3 je nepoužívá</td></tr>
+<tr><td class="p">ověřit licenci</td><td>Andulky v kategorii Andulka</td><td>soubor nese jméno fotografa (<code>catherine-boreham…</code>)</td></tr>
+<tr><td class="p">ověřit původ</td><td>fotky papoušků a přírody místo produktu: Konopný olej (126), Clay Bloc Amazon River (102), OrganiCa andulky (120), Mix hmyzu (231), Travní semena (153), Oregánový olej (159), Rakytníkový olej (267), Dárkový poukaz (336)</td><td>neznámý původ; navíc neukazují, co zákazník kupuje</td></tr>
+<tr><td class="p">vyměnit (důvěryhodnost)</td><td>Multipap (99), Pyl (93), Kvasnice (72), Humac (78) – vypadají jako generované ilustrace; Olej D3 (87) je textový banner</td><td>zákazník nevidí skutečné balení</td></tr>
+<tr><td class="p">vyměnit (kvalita)</td><td>Ananas (177), Cantaloupe (180), Papája (183), Mix hmyzu (231), Oregánový olej (159), Fauna Parrot (156)</td><td>rozlišení pod 300 px</td></tr>
+<tr><td class="n">doplnit</td><td>Pivovarské kvasnice odhořčené (436), Markus Mühle (437)</td><td>bez fotky</td></tr>
+<tr><td class="y">pravděpodobně v pořádku</td><td>fotky výrobců: Versele-Laga (108, 342), Healer (418, 421), Aroma Sanitol a Desinf (204, 207), Fauna Parrot (156), Papendo (63), Help balzám (400)</td><td>obvykle smí používat prodejci; potvrdit u dodavatelů</td></tr>
+</table>
+<p>Doporučení k jednotné prezentaci: skutečné balení na bílém pozadí, čtverec min. 1000 × 1000 px, produkt zabírá asi 80 % plochy, druhá fotka surovina zblízka. Stačí telefon u okna a bílý papír.</p>
+
+<h2>4. Chyby obsahu, které je nutné odstranit před spuštěním</h2>
+<table>
+<tr><th>Priorita</th><th>Chyba</th></tr>
+<tr><td class="n">blokující</td><td>9 nefunkčních odkazů (404) – seznam v prvním auditu (<code>AUDIT-paputo-2026-10-10.md</code>)</td></tr>
+<tr><td class="n">blokující</td><td>Balíček 2–8 (415): v popisu text „Popis produktu není dostupný“</td></tr>
+<tr><td class="n">blokující</td><td>3 návody vedené jako zboží za 0,01 Kč jdou vložit do košíku (372, 397, 273)</td></tr>
+<tr><td class="n">blokující</td><td>Fotka s vodoznakem National Geographic (330); licence iStock banneru</td></tr>
+<tr><td class="n">blokující</td><td>Nesoulad gramáže: Rakytník plod – název 100 g, adresa 50 g (279); Směs na míru – název od 10 kg, adresa od 5 kg (330)</td></tr>
+<tr><td class="n">blokující</td><td>Překlepy v názvech, které jsou vidět ve výpisech a vyhledávání: „bez <b>curku</b>“ (379), „45druhů )“ (111), „12a .“ (391)</td></tr>
+<tr><td class="n">blokující</td><td>Chybný latinský název: rybíz „Rubus ileus“ (382) – správně Ribes nigrum</td></tr>
+<tr><td class="p">důležité</td><td>2 produkty bez fotky (436, 437)</td></tr>
+<tr><td class="p">důležité</td><td>Překlepy v popisech: „ahrada“, „3 duhy“ (174), „zajeti“ (87), „nebo nebo“ (111), „bylinná posilovač“ (412), „požadavku“ (330); Healer × Healler (418/421)</td></tr>
+<tr><td>vhodné</td><td>57× mezera před tečkou/čárkou, 43× číslo bez mezery („100g“), nejednotný zápis variant</td></tr>
+</table>
+
+<h2>5. Co je zatím jen ukázka (není napojené)</h2>
+<table>
+<tr><th>Funkce</th><th>Stav v návrhu</th></tr>
+<tr><td>Košík, „Do košíku“, „Objednat“</td><td class="n">jen odkaz na produkt na paputo.cz, nic se nevkládá</td></tr>
+<tr><td>Účet / přihlášení</td><td class="n">odkaz na paputo.cz</td></tr>
+<tr><td>Ceny, dostupnost, varianty</td><td class="p">snímek k 10. 10. 2026, neaktualizuje se</td></tr>
+<tr><td>Vyhledávání</td><td class="p">funguje, ale jen v prohlížeči nad snímkem dat, ne přes Shoptet</td></tr>
+<tr><td>Stránky druhů a doporučení k druhům</td><td class="p">vypočítá je návrh; v e-shopu neexistují a čekají na potvrzení Janou</td></tr>
+<tr><td>Řazení, filtr „jen skladem“</td><td class="p">funguje nad snímkem dat</td></tr>
+<tr><td>Spodní mobilní lišta, lepivé tlačítko</td><td class="p">funkční jen jako design</td></tr>
+<tr><td>Doprava „od 150 Kč“</td><td class="p">text z dat 10. 10., žádný výpočet</td></tr>
+<tr><td>Kontaktní formulář, cookies lišta, analytika, platby</td><td class="n">v návrhu nejsou</td></tr>
+<tr><td>PDF taháky, obrázky v popisech</td><td class="y">skutečné soubory z paputo.cz (odkazy)</td></tr>
+</table>
+
+<h2 id="srovnani">Srovnání: návrh 2 Přírodní · návrh 2 Moderní · návrh 3</h2>
+<p><small>Kliknutím otevřete obrázek v plné velikosti. Detail produktu = Olej s vitamínem D3.</small></p>
+<div class="shots">
+  <div class="corner"></div><div class="h">Návrh 2 Přírodní</div><div class="h">Návrh 2 Moderní</div><div class="h">Návrh 3</div>
+  <div class="r">Desktop · úvod</div><a href="srovnani/v2p-d-home.jpg" target="_blank"><img src="srovnani/v2p-d-home.jpg" alt=""></a><a href="srovnani/v2m-d-home.jpg" target="_blank"><img src="srovnani/v2m-d-home.jpg" alt=""></a><a href="srovnani/v3-d-home.jpg" target="_blank"><img src="srovnani/v3-d-home.jpg" alt=""></a>
+  <div class="r">Desktop · produktové karty</div><a href="srovnani/v2p-d-kat.jpg" target="_blank"><img src="srovnani/v2p-d-kat.jpg" alt=""></a><a href="srovnani/v2m-d-kat.jpg" target="_blank"><img src="srovnani/v2m-d-kat.jpg" alt=""></a><a href="srovnani/v3-d-kat.jpg" target="_blank"><img src="srovnani/v3-d-kat.jpg" alt=""></a>
+  <div class="r">Desktop · detail produktu</div><a href="srovnani/v2p-d-prod.jpg" target="_blank"><img src="srovnani/v2p-d-prod.jpg" alt=""></a><a href="srovnani/v2m-d-prod.jpg" target="_blank"><img src="srovnani/v2m-d-prod.jpg" alt=""></a><a href="srovnani/v3-d-prod.jpg" target="_blank"><img src="srovnani/v3-d-prod.jpg" alt=""></a>
+</div>
+<div class="shots mob">
+  <div class="r">Mobil · úvod</div><a href="srovnani/v2p-m-home.jpg" target="_blank"><img src="srovnani/v2p-m-home.jpg" alt=""></a><a href="srovnani/v2m-m-home.jpg" target="_blank"><img src="srovnani/v2m-m-home.jpg" alt=""></a><a href="srovnani/v3-m-home.jpg" target="_blank"><img src="srovnani/v3-m-home.jpg" alt=""></a>
+  <div class="r">Mobil · produktové karty</div><a href="srovnani/v2p-m-kat.jpg" target="_blank"><img src="srovnani/v2p-m-kat.jpg" alt=""></a><a href="srovnani/v2m-m-kat.jpg" target="_blank"><img src="srovnani/v2m-m-kat.jpg" alt=""></a><a href="srovnani/v3-m-kat.jpg" target="_blank"><img src="srovnani/v3-m-kat.jpg" alt=""></a>
+  <div class="r">Mobil · detail produktu</div><a href="srovnani/v2p-m-prod.jpg" target="_blank"><img src="srovnani/v2p-m-prod.jpg" alt=""></a><a href="srovnani/v2m-m-prod.jpg" target="_blank"><img src="srovnani/v2m-m-prod.jpg" alt=""></a><a href="srovnani/v3-m-prod.jpg" target="_blank"><img src="srovnani/v3-m-prod.jpg" alt=""></a>
+</div>
+<p class="warn" style="margin-top:20px">Známá chyba návrhu 2 (neopravovala jsem ho, protože má zůstat beze změny): u oleje a dalších produktů ukazuje drobečková navigace „Škubání peří“ místo vlastní kategorie. V návrhu 3 je to opravené.</p>
+</div>
+</body>
+</html>
