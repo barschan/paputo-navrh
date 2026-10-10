@@ -1,15 +1,16 @@
-# Paputo.cz – návrh nového vzhledu
+# Paputo.cz – návrh nového e-shopu
 
-Náhled: https://barschan.github.io/paputo-navrh/
+**Náhled:** https://barschan.github.io/paputo-navrh/
 
-Návrh úvodní stránky e-shopu [paputo.cz](https://www.paputo.cz) (říjen 2026). Nejde o funkční e-shop. Odkazy vedou na skutečný paputo.cz.
+Návrh nového vzhledu e-shopu [paputo.cz](https://www.paputo.cz) (říjen 2026). Nejde o funkční e-shop, tlačítko „Koupit“ vede na skutečný paputo.cz.
 
-**Co se mění oproti dnešnímu webu**
-- teplé barvy z peří papoušků (tyrkysová, listová zelená, mango) místo čistě bílé
-- hned na začátku jasná cesta: „Jakého máte papouška?“ → „Základ zdraví v 8 krocích“ → „Co vás trápí?“
-- přehledné menu bez duplicit, Návody a Kontakt jsou vidět hned
-- tahák na lednici (PDF) a poradenství jsou na očích
+Obsah je převzatý ze současného webu: 57 produktů (varianty, ceny, kódy, dostupnost, krátké i dlouhé popisy, fotky), 20 kategorií, návody, obchodní podmínky a články. Každý produkt má krátký srozumitelný název a pod ním zůstává celý původní název z e-shopu.
 
-Inspirace: Harrison's Bird Foods (výběr podle druhu a zdravotního problému), TOP's Parrot Food (výběr podle velikosti, balíčky), BirdTricks (bezplatné návody, příběh zakladatele).
+**Co je nové**
+- teplé barvy místo bílé, fotky a bannery z hlavní stránky e-shopu (karusel „před a po“ / „černé peří“)
+- chytré vyhledávání: našeptává už při psaní, nevadí chybějící diakritika („zako“ najde „žako“), hledá v názvech, popisech, variantách (druhy papoušků), kódech, kategoriích i návodech
+- jasná cesta: Jakého máte papouška? → Základ zdraví v 8 krocích → Co vás trápí?
+- výběr zrnin: druh, množství a typ zvlášť
+- řazení a filtr „jen skladem“ v kategoriích, PDF taháky na lednici na očích
 
-Všechno jde postavit v Shoptetu: bannery, kategorie s obrázky, vlastní HTML bloky a barvy šablony.
+Data stažena 10. 10. 2026.
