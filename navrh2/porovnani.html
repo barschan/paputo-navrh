@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Paputo – návrh 2: rozbor a srovnání</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#1F2A2A;background:#FBF6EC;line-height:1.6;font-size:16px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;color:#0F4C4A;line-height:1.15}
+h1{font-size:2.3rem;margin:36px 0 8px}
+h2{font-size:1.55rem;margin:46px 0 10px;padding-top:18px;border-top:1px solid #E9DFCB}
+h3{font-size:1.05rem;margin:22px 0 6px}
+a{color:#0F4C4A;font-weight:600}
+.top{background:#2B2B2B;color:#fff;padding:10px 0;font-size:.9rem}.top a{color:#FFD08A}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.btn{display:inline-block;background:#0F4C4A;color:#fff;text-decoration:none;padding:.6em 1.1em;border-radius:999px;font-weight:600}
+.btn.alt{background:#F4A62A;color:#1F2A2A}.btn.dark{background:#111614}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0}
+.cmp.m{grid-template-columns:repeat(3,minmax(0,260px));justify-content:start}
+.cmp figure{margin:0;background:#fff;border:1px solid #E9DFCB;border-radius:12px;padding:8px}
+.cmp img{width:100%;border-radius:8px;display:block}
+.cmp figcaption{font-size:.85rem;font-weight:600;padding:6px 2px 0}
+table{border-collapse:collapse;width:100%;background:#fff;border-radius:12px;overflow:hidden;font-size:.92rem;margin:10px 0}
+th,td{border-bottom:1px solid #EEE6D6;padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#F3E9D6;font-weight:600}
+.ok{color:#2E8B57;font-weight:700}.warn{color:#C9502F;font-weight:700}
+.note{background:#fff;border-left:4px solid #F4A62A;border-radius:8px;padding:10px 14px;margin:12px 0}
+ul{padding-left:1.2em}li{margin:.25em 0}
+code{background:#F3E9D6;border-radius:4px;padding:0 4px;font-size:.88em}
+@media(max-width:800px){.cmp{grid-template-columns:1fr}.cmp.m{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap" style="padding-bottom:0">Rozbor návrhu 2 · <a href="./">otevřít návrh 2</a> · <a href="../">otevřít návrh 1</a> · skutečný e-shop paputo.cz zůstal beze změny</div></div>
+<div class="wrap">
+<h1>Paputo – návrh 2: co se změnilo a proč</h1>
+<p>Kliknutím na obrázek ho zobrazíte v plné velikosti. Druhé kolo UX/UI. Návrh 1 zůstává beze změny na původní adrese. Návrh 2 má <b>dvě barevné varianty</b>, mezi kterými se přepíná v horní liště.</p>
+<div class="links">
+  <a class="btn" href="./?theme=priroda#/">Návrh 2 – Přírodní</a>
+  <a class="btn dark" href="./?theme=moderni#/">Návrh 2 – Moderní</a>
+  <a class="btn alt" href="../">Návrh 1 (původní)</a>
+</div>
+
+<h2>Srovnání: úvodní stránka (počítač)</h2>
+<div class="cmp">
+  <figure><a href="srovnani/v1-d-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v1-d-home.jpg" alt=""></a><figcaption>Návrh 1</figcaption></figure>
+  <figure><a href="srovnani/v2-priroda-d-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-priroda-d-home.jpg" alt=""></a><figcaption>Návrh 2 – Přírodní</figcaption></figure>
+  <figure><a href="srovnani/v2-moderni-d-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-moderni-d-home.jpg" alt=""></a><figcaption>Návrh 2 – Moderní</figcaption></figure>
+</div>
+<h2>Srovnání: produktové karty (počítač)</h2>
+<div class="cmp">
+  <figure><a href="srovnani/v1-d-kat.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v1-d-kat.jpg" alt=""></a><figcaption>Návrh 1</figcaption></figure>
+  <figure><a href="srovnani/v2-priroda-d-kat.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-priroda-d-kat.jpg" alt=""></a><figcaption>Návrh 2 – Přírodní</figcaption></figure>
+  <figure><a href="srovnani/v2-moderni-d-kat.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-moderni-d-kat.jpg" alt=""></a><figcaption>Návrh 2 – Moderní</figcaption></figure>
+</div>
+<h2>Srovnání: mobil</h2>
+<div class="cmp m">
+  <figure><a href="srovnani/v1-m-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v1-m-home.jpg" alt=""></a><figcaption>Návrh 1 – úvod</figcaption></figure>
+  <figure><a href="srovnani/v2-priroda-m-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-priroda-m-home.jpg" alt=""></a><figcaption>Návrh 2 Přírodní – úvod</figcaption></figure>
+  <figure><a href="srovnani/v2-moderni-m-home.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-moderni-m-home.jpg" alt=""></a><figcaption>Návrh 2 Moderní – úvod</figcaption></figure>
+  <figure><a href="srovnani/v1-m-kat.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v1-m-kat.jpg" alt=""></a><figcaption>Návrh 1 – kategorie</figcaption></figure>
+  <figure><a href="srovnani/v2-priroda-m-kat.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-priroda-m-kat.jpg" alt=""></a><figcaption>Návrh 2 Přírodní – kategorie</figcaption></figure>
+  <figure><a href="srovnani/v2-m-prod.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-m-prod.jpg" alt=""></a><figcaption>Návrh 2 – detail s lepivým tlačítkem</figcaption></figure>
+</div>
+
+<h2>1. Typografie</h2>
+<ul>
+  <li><b>Patkové písmo Fraunces</b> zůstalo jen pro hlavní nadpisy stránek a sekcí, ve slabší řezu (600 místo 800).</li>
+  <li><b>Názvy produktů, ceny, menu a texty</b> jsou v moderním bezpatkovém písmu <b>Inter</b>, které je dobře čitelné i v malých velikostech na mobilu. Čísla v cenách mají stejnou šířku, takže se ceny pod sebou nerozskakují.</li>
+  <li>Varianta <b>Moderní</b> používá místo patek výrazný grotesk <b>Bricolage Grotesque</b>.</li>
+</ul>
+
+<h2>2. Produktové karty</h2>
+<table>
+<tr><th>Prvek</th><th>Návrh 1</th><th>Návrh 2</th></tr>
+<tr><td>Fotka</td><td>různé poměry, ořez i roztažení</td><td>jednotný čtverec 1:1, bílý rámeček, fotka se nikdy neořízne ani nezdeformuje</td></tr>
+<tr><td>Název</td><td>patkové písmo, různá výška</td><td>bezpatkové, max. 2 řádky, karty jsou stejně vysoké</td></tr>
+<tr><td>Varianty</td><td>nebyly vidět</td><td>počet variant + nejčastější velikosti (např. „4 varianty · 30ml · 100ml“), vždy na jeden řádek</td></tr>
+<tr><td>Dostupnost</td><td>malá, u ceny</td><td>samostatný řádek s barevnou tečkou (Skladem / Na dotaz / Objednáno)</td></tr>
+<tr><td>Cena</td><td>jen cena</td><td>cena „od“ + měrná cena (Kč/kg, Kč/l)</td></tr>
+<tr><td>Nákupní akce</td><td>chyběla</td><td>„Do košíku“ (jedna varianta) · „Vybrat variantu“ (více variant) · „Objednat“ (služby)</td></tr>
+<tr><td>Štítky</td><td>číslo</td><td>„č. 02“ (schéma Paputo), „Balíček“, „Služba“</td></tr>
+</table>
+
+<h2>3. Fotografie – audit 55 fotek a návrh sjednocení</h2>
+<p>Poměr stran se pohybuje od 0,36 (úzká vysoká lahvička) po 2,45 (široký pruh zrnin). Proto návrh 2 dává všechny fotky do <b>stejného čtvercového rámečku s bílým pozadím</b>, celou a bez ořezu. Produkty na bílém pozadí s rámečkem splynou a ostatní fotky jsou vycentrované.</p>
+<table>
+<tr><th>Skupina</th><th>Produkty (ID)</th><th>Doporučení</th></tr>
+<tr><td class="ok">Skutečné fotky balení – v pořádku</td><td>Mineral Bloc (108), Aroma Sanitol (204), Desinf (207), Fauna Parrot (156), Papendo (63), Healler B2 (421), Help balzám (400), Clay Bloc Mini (342)</td><td>vzor pro ostatní</td></tr>
+<tr><td class="ok">Fotky suroviny – poctivé</td><td>bobule, byliny, semena, sušené ovoce, hmyz, koral (84), OrganiCaPAP MG (449)</td><td>ponechat; ideálně doplnit 2. fotku sáčku s etiketou</td></tr>
+<tr><td class="warn">Ilustrační obrázky místo produktu</td><td>Multipap (99), Pyl (93), Kvasnice (72), Humac (78) – vypadají jako generované ilustrace; Olej D3 (87) je textový banner; papoušci místo produktu: Konopný olej (126), Clay Bloc Amazon River (102), OrganiCa andulky (120), Mix hmyzu (231)</td><td>vyfotit skutečný sáček/lahvičku (stačí telefon u okna na bílém papíře); ilustraci použít až jako 2. fotku</td></tr>
+<tr><td class="warn">Možný problém s autorskými právy</td><td>Směs na míru (330) – na fotce je vodoznak National Geographic</td><td>vyměnit</td></tr>
+<tr><td class="warn">Nízké rozlišení (pod 300 px)</td><td>Ananas (177), Cantaloupe (180), Papája (183), Mix hmyzu (231), Oregánový olej (159), Fauna Parrot (156)</td><td>nahrát větší fotky (min. 1000 × 1000 px)</td></tr>
+<tr><td class="warn">Chybí fotka</td><td>Pivovarské kvasnice odhořčené (436), Markus Mühle (437)</td><td>doplnit; do té doby zobrazen čistý zástupný rámeček „Fotografie bude doplněna“</td></tr>
+<tr><td>Koláže</td><td>Balíček 2–8 (415), Andulka balíček (426)</td><td>funkční, ale v malé kartě nečitelné – lepší jedna fotka všech produktů vedle sebe</td></tr>
+<tr><td>Piktogramy</td><td>návody 372, 397, 273 · konzultace (255 – otazník) · poukaz (336)</td><td>v návrhu 2 jsou návody přesunuty do Poradny, kde piktogram nevadí</td></tr>
+</table>
+
+<h2>4. Úvodní stránka – nové pořadí z pohledu zákazníka</h2>
+<table>
+<tr><th>#</th><th>Sekce</th><th>Proč tady</th></tr>
+<tr><td>1</td><td>Hlavní sdělení + <b>výběr druhu papouška</b> + fotky před/po z e-shopu</td><td>zákazník hned vidí, co e-shop dělá, a jedním klikem jde na svůj druh</td></tr>
+<tr><td>2</td><td>Pruh důvěry: ruční výroba, BIO, osobní poradenství, doprava od 150 Kč</td><td>odpovídá na „proč tady“; doprava je z dat e-shopu (DPD výdejní místo 150 Kč, osobní odběr 0 Kč)</td></tr>
+<tr><td>3</td><td>První objednávka ve 3 krocích</td><td>nováček ví, jak postupovat</td></tr>
+<tr><td>4</td><td>Schéma 8 kroků – <b>u každého produktu je důvod, PROČ ho doporučujeme</b></td><td>v návrhu 1 nebylo vysvětleno; důvody jsou převzaté z textu „NÁVODY Paputo“, zdroj je pod sekcí uvedený</td></tr>
+<tr><td>5</td><td>Řešení problémů (6 kompaktních dlaždic)</td><td>druhý nejčastější důvod návštěvy</td></tr>
+<tr><td>6</td><td>Další produkty ze schématu (produktové karty)</td><td>ukázka nové karty</td></tr>
+<tr><td>7</td><td>Poradna: služby + PDF taháky</td><td>oddělené od zboží</td></tr>
+</table>
+<p>Vypuštěno oproti návrhu 1: samostatná mřížka kategorií (je v menu) a duplicitní dlaždice pod karuselem. Stránka je kratší, ale nic se neztratilo.</p>
+
+<h2>5. Výběr podle druhu papouška</h2>
+<p>Varianty zrnin v e-shopu obsahují <b>29 druhů</b>. Každý druh má v návrhu 2 vlastní stránku (např. <a href="./#/druh/zako">Žako</a>, <a href="./#/druh/andulka">Andulka</a>, <a href="./#/druh/korela">Korela</a>):</p>
+<ul>
+  <li>dostupné typy směsí (START, SPECIÁL, DIET, JÁTRA) s velikostmi a cenami – kliknutím se otevřou zrniny s předvybraným druhem</li>
+  <li>doporučený základ: pro andulky Andulka balíček + OrganiCa pro andulky, pro ostatní balíček č. 2–8</li>
+  <li>doplňky podle velikosti: malí → Clay Bloc Mini, Divoká a travní semena, Mix hmyzu pro malé druhy; střední a velcí → Clay Bloc Amazon River, Mix na namáčení, Sušený hmyz</li>
+  <li>australské druhy → Travní semena („nutná pro zdraví andulek, ale i ostatních australských“)</li>
+</ul>
+<div class="note">⚠️ Ke kontrole Janou: rozdělení druhů na malé, střední a velké je moje orientační. E-shop ho nikde neuvádí. Všechny důvody doporučení jsou citované z názvů a popisů produktů.</div>
+<div class="cmp" style="grid-template-columns:1fr"><figure><a href="srovnani/v2-d-druh.jpg" target="_blank" title="Zobrazit v plné velikosti"><img src="srovnani/v2-d-druh.jpg" alt=""></a><figcaption>Stránka druhu – Žako</figcaption></figure></div>
+
+<h2>6. Navigace</h2>
+<ul>
+  <li><b>Podle druhu ▾</b> – rozbalovací menu s 29 druhy ve 3 skupinách</li>
+  <li><b>Krmivo a doplňky ▾</b> – Krmivo / Doplňky / Péče / Balíčky ve sloupcích</li>
+  <li><b>Škubání a problémy</b> · <b>První objednávka</b> · <b>Poradna</b> · Kontakt</li>
+  <li>Vyhledávání: při kliknutí ukáže „Často hledáte“ a výsledky řadí do skupin Druh / Produkty / Kategorie / Poradna</li>
+</ul>
+
+<h2>7. Katalog vs. poradna</h2>
+<ul>
+  <li>3 návody, které jsou v e-shopu vedené jako „produkt“ za 0,01 Kč (č. 000, Informace o zrninách, Návody a tipy), jsou <b>vyřazené z nákupních výpisů</b>. V kategorii je místo nich zelený odkaz „Návod zdarma“.</li>
+  <li><b>Služby</b> (konzultace, směs na míru, dárkový poukaz) mají vlastní typ karty s tlačítkem „Objednat / Poptat / Vybrat hodnotu“.</li>
+  <li><b>Poradna</b> spojuje služby, návody, PDF taháky a články na jedno místo.</li>
+</ul>
+
+<h2>8. Mobil – audit návrhu 1 a řešení</h2>
+<table>
+<tr><th>Problém v návrhu 1</th><th>Řešení v návrhu 2</th></tr>
+<tr><td>Hlavička zabírala 3 řádky (lišta, logo, tlačítka)</td><td>skrytá informační lišta, logo + košík + menu na 1 řádku, vyhledávání pod tím</td></tr>
+<tr><td>Menu jen přes ☰ nahoře</td><td><b>spodní lišta</b>: Domů · Sortiment · Hledat · Poradna · Košík (palcem dosažitelná)</td></tr>
+<tr><td>Na detailu je tlačítko koupit daleko pod fotkou</td><td><b>lepivý pruh s cenou a „Do košíku“</b> stále dole</td></tr>
+<tr><td>Zrniny: 60+ tlačítek variant</td><td>3 rozbalovací výběry (už v návrhu 1 opraveno), navíc předvýběr podle druhu</td></tr>
+<tr><td>Karty v 1–2 sloupcích s různou výškou</td><td>2 sloupce, stejná výška, tlačítko přes celou šířku karty</td></tr>
+<tr><td>Dlouhé úvodní dlaždice pod sebou</td><td>kratší úvod, výběr druhu hned nahoře</td></tr>
+</table>
+
+<h2>9. Co se vyplatí převzít z kvalitních zahraničních e-shopů</h2>
+<table>
+<tr><th>Řešení</th><th>Kde ho najdete</th><th>Použito v návrhu 2</th></tr>
+<tr><td>Nákup podle druhu zvířete i podle zdravotního problému</td><td>Harrison's Bird Foods (Shop by Species, Shop by Condition)</td><td class="ok">ano – stránky druhů, „Co vašeho papouška trápí?“</td></tr>
+<tr><td>Výběr podle velikosti ptáka + hotové balíčky</td><td>TOP's Parrot Food</td><td class="ok">ano – malí/střední/velcí, balíčky 2–8 a Andulka</td></tr>
+<tr><td>Bezplatné materiály jako vstupní bod</td><td>BirdTricks (Free downloads)</td><td class="ok">ano – PDF taháky v Poradně</td></tr>
+<tr><td>Profil zvířete, který řídí nabídku</td><td>Tails (profil psa na úvodu)</td><td class="ok">zjednodušeně – „Pro koho nakupujete?“ v úvodu</td></tr>
+<tr><td>Varianty a cena čitelné přímo na kartě</td><td>doporučení z výzkumu Baymard Institute (Product List UX 2025)</td><td class="ok">ano</td></tr>
+<tr><td>Lepivé tlačítko koupit a spodní navigace na mobilu</td><td>běžný standard mobilních e-shopů</td><td class="ok">ano</td></tr>
+<tr><td>Předplatné / opakovaná objednávka</td><td>Chewy, Forthglade (Subscribe &amp; Save)</td><td class="warn">ne – vhodné do budoucna (zrniny se kupují pravidelně); v Shoptetu jen přes doplněk</td></tr>
+</table>
+<p style="font-size:.85rem">Zdroje: <a href="https://www.harrisonsbirdfoods.com/">Harrison's Bird Foods</a>, <a href="https://topsparrotfood.com/">TOP's Parrot Food</a>, <a href="https://www.birdtricksstore.com/">BirdTricks</a>, <a href="https://baymard.com/research-articles/current-state-product-list-and-filtering">Baymard – Product List UX 2025</a>, <a href="https://www.limely.co.uk/blog/top-10-pet-brand-ecommerce-websites">Limely – Top 10 Pet Brand Ecommerce Websites</a> (Tails, Forthglade, Chewy).</p>
+
+<h2>10. Kvalita obsahu – nalezené chyby (na e-shopu, nic jsem neopravovala)</h2>
+<p>V návrhu jsou texty převzaté přesně, takže tyhle chyby v nich jsou také. Opravit je musí Jana v Shoptetu.</p>
+<table>
+<tr><th>Produkt</th><th>Nalezeno</th><th>Oprava</th></tr>
+<tr><td>Bez černý (379) – název</td><td>„bez <b>curku</b>“</td><td>bez cukru</td></tr>
+<tr><td>Rybíz černý (382) – popis</td><td>„(<b>Rubus ileus</b> L.)“</td><td>Ribes nigrum L.</td></tr>
+<tr><td>Směs Zahrada (174) – popis</td><td>„<b>ahrada</b> směs“, „3 <b>duhy</b> ovoce“</td><td>Zahrada, druhy</td></tr>
+<tr><td>Olej s D3 (87) – popis</td><td>„v <b>zajeti</b>“</td><td>v zajetí</td></tr>
+<tr><td>Divoká a travní (111)</td><td>„<b>nebo nebo</b>“; název „45druhů )“</td><td>nebo; „45 druhů)“</td></tr>
+<tr><td>Herba Bird (412)</td><td>„bylinn<b>á</b> posilovač“</td><td>bylinný posilovač</td></tr>
+<tr><td>Směs na míru (330)</td><td>„požadavk<b>u</b>“; v názvu „od 10 kg“, ale adresa stránky říká „od 5 kg“</td><td>požadavků; ověřit minimum</td></tr>
+<tr><td>Rakytník plod (279)</td><td>název „100 g“, adresa stránky „50 g“</td><td>ověřit gramáž</td></tr>
+<tr><td>Balíček 2–8 (415)</td><td>v popisu zůstal text „<b>Popis produktu není dostupný</b>“; „vápníkuHMOTNOST“ bez mezery</td><td>smazat / doplnit mezeru</td></tr>
+<tr><td>Healer gel (418) × Healler B2 (421)</td><td>jednou „Healer“, jednou „Healler“</td><td>sjednotit podle výrobce</td></tr>
+<tr><td>Pyl (93)</td><td>„železo,hliník“</td><td>mezera za čárkou</td></tr>
+<tr><td>Varianty</td><td>„30ml“ vs. „50 ml“, „1kg“ vs. „1 kg“; dárkový poukaz má hodnoty bez „Kč“</td><td>sjednotit zápis (s mezerou), doplnit „Kč“</td></tr>
+<tr><td>Typografie obecně</td><td>57× mezera před tečkou/čárkou, 43× číslo bez mezery („100g“) – v názvech a popisech produktů</td><td>hromadně opravit při úpravě popisů</td></tr>
+<tr><td>Návody jako produkty</td><td>3 položky za 0,01 Kč jdou vložit do košíku</td><td>v Shoptetu převést na články nebo stránky</td></tr>
+</table>
+
+<h2>Co dál</h2>
+<ol>
+  <li>Vybrat barevnou variantu (Přírodní / Moderní, případně kombinaci).</li>
+  <li>Jana zkontroluje rozdělení druhů podle velikosti a krátké názvy produktů.</li>
+  <li>Po schválení nahradím návrhem 2 zveřejněnou ukázku. <b>Do té doby zůstává návrh 1 na původní adrese.</b></li>
+  <li>Převod do Shoptetu (šablona, bannery, kategorie) – samostatný krok.</li>
+</ol>
+</div>
+</body>
+</html>
